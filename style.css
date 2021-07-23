@@ -23,10 +23,11 @@ nav {
 }
 
 main {
-    text-align: center;
+    text-align: center;;
     margin-top: 10%;
     font-family: Arial, sans-serif;
     font-size: smaller;
+    width: 100%;
 }
 
 main > a {
@@ -37,6 +38,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #search-wrapper {
@@ -44,16 +46,25 @@ form {
     flex-direction: row;
     border: 1px solid lightgray;
     width: 500px;
-    margin: 0 auto;
-    border-radius: 20px;
+    max-width: 90%;
+    min-width: 300px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 25px;
 }
 
 #search-wrapper > img {
     margin-left: 10px;
 }
 
+#search-wrapper:hover {
+    box-shadow: 0 0 5px 1px lightgray;
+}
+
 #search {
     width: 400px;
+    max-width: 80%;
+    min-width: 200px;
     margin: 10px 10px;
     border: none;
 }
@@ -69,9 +80,14 @@ form {
 }
 
 button {
-    margin: 0 20px;
-    border: none;
+    margin: 2px 20px;
+    border: 1px solid rgb(239, 239, 239);
+    border-radius: 4px;
     padding: 10px;
+}
+
+button:hover {
+    border: 1px solid lightgray;
 }
 
 #language > p {
@@ -87,22 +103,27 @@ footer {
     display: inline;
     bottom: 0;
     width: 100%;
-    padding: 0;
-    margin: 20px auto;
+    height: fit-content;
+    padding: 50px 0 0 0;
+    margin: 20px auto 0 auto;
     font-family: Arial, sans-serif;
     font-size: small;
+    background-color: #ebebeb;
+    border-top: 1px solid lightgray;
 }
 
 #left {
     position: absolute;
     left: 20px;
     bottom: 7px;
+    margin-bottom: 10px;
 }
 
 #right {
     position: absolute;
     right: 20px;
     bottom: 7px;
+    margin-bottom: 10px;
 }
 
 .footer-link {
@@ -123,6 +144,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 20px 0 20px 0;
     }
 
     #left {
